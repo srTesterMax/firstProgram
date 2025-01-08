@@ -42,6 +42,13 @@ jobs:
         run: dotnet --version
       
       - run: echo "The preinstalled tools are located here on the runner ${{ runner.tool_cache }}."
+
+   Second-Job:
+    name: The second job running on another runner
+    runs-on: windows-latest
+    needs: Example-Actions-Job
+    steps:
+      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
       
       - name: List files in tool cache
         run: |
