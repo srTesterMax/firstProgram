@@ -5,8 +5,8 @@ jobs:
      name: Exploring Github Actions
      runs-on: ubuntu-latest
      steps:
-       #Display the event that trigerred the flow
-        # Display the event that triggered the workflow
+      #Display the event that trigerred the flow
+      # Display the event that triggered the workflow
       - run: echo "The job was triggered by a ${{ github.event_name }} event."
       
       # Runner information
